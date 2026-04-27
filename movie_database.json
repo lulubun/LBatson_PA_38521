@@ -1,0 +1,12 @@
+{
+    "a movie": {
+        "genre": "romance",
+        "director": "someone",
+        "release_date": "2020-12-20",
+        "actors": [
+            "someoneelse",
+            "girl1",
+            "boy1"
+        ]
+    }
+}

@@ -73,6 +73,9 @@ def delete_movie():
        print("Movie not found in the database.")
 
 def view_all_movies():
+    if not movie_database:
+        print("No movies in the database.")
+        return
     for title, data in movie_database.items():
         print(f"{title}: {json.dumps(data, indent=4)}")
 
@@ -86,7 +89,7 @@ def read_file():
     try:
         with open("movie_database.json", "r") as file:
             movie_database = json.load(file)
-            print("Data loaded successfully.")
+            print("Data loaded successfully.", list(movie_database.keys())[:5])
     except FileNotFoundError:
         print("No saved data found. Starting with an empty database.")
 
